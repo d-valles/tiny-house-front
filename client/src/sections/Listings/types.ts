@@ -10,6 +10,14 @@ interface Listing {
     rating: number;
   }
   
-  export type ListingsData = {
+export interface ListingsData {
     listings: Listing[];
-  };
+};
+
+export interface DeleteListingData {
+    deleteListing: Listing;
+}
+
+export interface DeleteListingVariables {
+    id: string;
+}
