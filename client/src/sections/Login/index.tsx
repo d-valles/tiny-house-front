@@ -9,6 +9,7 @@ import { LogIn as LogInData, LogInVariables } from "../../lib/graphql/mutations/
 import { Viewer } from "../../lib/types"
 import { ErrorBanner } from "../../lib/components";
 import { displaySuccessNotification, displayErrorMessage } from "../../lib/utils";
+import logo from "./assets/google_logo.jpg";
 
 interface Props {
     setViewer: (viewer: Viewer) => void;
@@ -87,7 +88,7 @@ export const Login = ({ setViewer }: Props) => {
                     <Text>Sign in with Google to start booking available rentals!</Text>
                 </div>
                 <button className="log-in-card__google-button" onClick={handleAuthorize}>
-                    <img src="https://d2uusema5elisf.cloudfront.net/courses/tinyhouse-react-masterclass-part-2/module_4/lesson_4.6/public/assets/google_logo.jpg" alt="Google logo" className="logo-in-card__google-button-logo"/>
+                    <img src={logo} alt="Google logo" className="log-in-card__google-button-logo"/>
                     <span className="log-in-card__google-button-text">
                         Sign in with Google
                     </span>
